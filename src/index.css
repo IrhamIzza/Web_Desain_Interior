@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: poppins;
+  --color-primary: 138, 124, 86, 1; /* rgb tanpa koma */
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #c54a4a;
+@theme {
+  --color-gold: #8A7C56;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  @apply font-sans antialiased;
 }
 
 /* a {
