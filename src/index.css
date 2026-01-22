@@ -1,12 +1,11 @@
 @import "tailwindcss";
-
 :root {
-  font-family: poppins;
-  --color-primary: 138, 124, 86, 1; /* rgb tanpa koma */
+  font-family: "system-ui", Avenir , "Helvetica Neue", sans-serif;
 }
 
 @theme {
   --color-gold: #8A7C56;
+  --font-sans: "Poppins", system-ui, sans-serif;
 }
 
 body {

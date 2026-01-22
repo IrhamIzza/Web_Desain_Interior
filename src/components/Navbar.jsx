@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="text-gold text-3xl font-bold">Desain Interior</div>
 
         {/* Menu */}
-        <ul className="hidden sm:flex gap-6 font-medium text-[22px] tracking-wide">
+        <ul className="hidden sm:flex gap-10 font-medium text-[20px] tracking-wide">
           <li>
             <NavLink to="/" end className={navClass}>
               Beranda

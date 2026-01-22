@@ -1,20 +1,46 @@
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-white">Portofolio</h1>
-      <p className="text-xl text-white">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
-        a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-        Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium
-        at, ligula. Suspendisse aliquet, sem ut cursus luctus, ipsum leo
-        elementum augue, eget facilisis sapien nunc sit amet orci. Fusce
-        venenatis semper urna. Aliquam erat volutpat
-        <br />
-        <br />
-      </p>
+    <div className=" py-10 px-32 flex flex-col gap-20">
+      {/* Landing Page */}
+      <div className="flex  items-center gap-20">
+        <div className="flex-1 flex flex-col gap-2 ">
+          <h1 className="text-xl font-bold">Halo, Kami Adalah</h1>
+          <h1 className="text-4xl font-bold ">Interior Designer</h1>
+          <h3 className="text-xl font-bold ">
+            Kami Menyediakan{" "}
+            <span className="text-gold">Berbagai Macam Desain</span>{" "}
+          </h3>
+
+          <p className="mt-10 max-w-[460px]">
+            Kami ingin membuat{" "}
+            <span className="font-bold">Website Interior Design</span> menjadi
+            forum yang dapat menjadi jembatan antara jasa desain inerior dan
+            peminat desain
+          </p>
+        </div>
+
+        {/* IMAGE GRID */}
+        <div className="grid grid-cols-2 grid-rows-2 gap-5 h-[400px] flex-1">
+          {/* BESAR */}
+          <img
+            src="/img/Head (1).jpg"
+            className="row-span-2 w-full h-full object-cover rounded-lg"
+            alt=""
+          />
+          {/* KECIL ATAS */}
+          <img
+            src="/img/Head (2).jpg"
+            className="w-full h-full object-cover rounded-lg"
+            alt=""
+          />
+          {/* KECIL BAWAH */}
+          <img
+            src="/img/Head (3).jpg"
+            className="w-full h-full object-cover rounded-lg"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
-}   
+}
