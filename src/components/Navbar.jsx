@@ -1,49 +1,61 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navClass = ({ isActive }) =>
+    `relative pb-[1px] transition-colors duration-300
+     ${isActive ? "text-gold" : "text-black hover:text-gold"}
+     after:absolute after:left-1/2 after:-bottom-1
+     after:h-[2px] after:bg-gold after:rounded-full
+     after:-translate-x-1/2
+     after:transition-all after:duration-300
+     ${isActive ? "after:w-[85%]" : "after:w-0 hover:after:w-[85%]"}`;
 
   return (
-    <nav className="p-4 bg-gray-900">
+    <nav className="p-4 border-b-2  border-gray-400 shadow-md ">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-blue-400 text-lg font-bold">Portofolio</div>
+        <div className="text-gold text-3xl font-bold">Desain Interior</div>
 
-        {/* Menu desktop */}
-        <ul className="hidden sm:flex gap-6 text-white">
+        {/* Menu */}
+        <ul className="hidden sm:flex gap-6 font-medium text-[22px] tracking-wide">
           <li>
-            <Link to="/" className="hover:text-blue-400 duration-300 ease-out">
-              Home
-            </Link>
+            <NavLink to="/" end className={navClass}>
+              Beranda
+            </NavLink>
           </li>
           <li>
-            <a href="#about" className="hover:text-blue-400 duration-300 ease-out">
-              About
-            </a>
+            <NavLink to="/tentang" className={navClass}>
+              Tentang
+            </NavLink>
           </li>
           <li>
-            <a href="#project" className="hover:text-blue-400 duration-300 ease-out">
-              Services
-            </a>
+            <NavLink to="/kategori" className={navClass}>
+              Kategori
+            </NavLink>
           </li>
           <li>
-            <a href="#skill" className="hover:text-blue-400 duration-300 ease-out">
-              Skill
-            </a>
+            <NavLink to="/testimoni" className={navClass}>
+              Testimoni
+            </NavLink>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-400 duration-300 ease-out">
-              Contact
-            </a>
+            <NavLink to="/kontak" className={navClass}>
+              Kontak
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/kontak" className={navClass}>
+              Konsultasi
+            </NavLink>
           </li>
         </ul>
 
         {/* Hamburger (mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="block sm:hidden text-white focus:outline-none"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          className="block sm:hidden text-black focus:outline-none" aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? (
             <i className="ph ph-x text-2xl"></i>
@@ -59,50 +71,59 @@ export default function Navbar() {
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="flex flex-col gap-2 text-white">
+        <ul className="flex flex-col gap-2 text-black">
           <li>
             <Link
               to="/"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              Home
+              Beranda
             </Link>
           </li>
           <li>
             <a
-              href="#about"
+              href="#tentang"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              About
+              Tentang
             </a>
           </li>
           <li>
             <a
-              href="#project"
+              href="#kategori"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              Project
+              Kategori
             </a>
           </li>
           <li>
             <a
-              href="#skill"
+              href="#testimoni"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              Skill
+              Testimoni
             </a>
           </li>
           <li>
             <a
-              href="#contact"
+              href="#kontak"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              Kontak
+            </a>
+          </li>
+          <li>
+            <a
+              href="#konsultasi"
+              className="block px-2 py-1 hover:bg-blue-500 rounded"
+              onClick={() => setIsOpen(false)}
+            >
+              Konsultasi
             </a>
           </li>
         </ul>
