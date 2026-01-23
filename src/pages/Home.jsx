@@ -41,6 +41,24 @@ export default function Home() {
           />
         </div>
       </div>
+      {/* Tentang Kami */}
+      <div className="flex gap-24 items-center">
+        <img src="/img/logo.jpg" className="max-w-[300px] rounded-full border-2 object-cover"/>
+        <div className="flex flex-col gap-12">
+          <h1 className="text-3xl font-bold">
+            <span className="text-gold">Tentang </span> Kami
+          </h1>
+          <p>
+            Kami adalah studio desain interior yang berfokus pada gaya tropis,
+            menghadirkan suasana hangat, alami, dan menyegarkan ke dalam setiap
+            ruang. Dengan memadukan elemen alam, pencahayaan yang harmonis,
+            serta palet warna lembut, kami menciptakan interior yang tidak hanya
+            indah, tetapi juga nyaman dan menenangkan. Kami percaya bahwa hunian
+            yang baik adalah ruang yang selaras dengan lingkungan dan gaya hidup
+            penghuninya.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
