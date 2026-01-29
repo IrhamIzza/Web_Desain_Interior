@@ -43,7 +43,10 @@ export default function Home() {
       </div>
       {/* Tentang Kami */}
       <div className="flex gap-24 items-center">
-        <img src="/img/logo.jpg" className="max-w-[300px] rounded-full border-2 object-cover"/>
+        <img
+          src="/img/logo.jpg"
+          className="max-w-[300px] rounded-full border-2 object-cover"
+        />
         <div className="flex flex-col gap-12">
           <h1 className="text-3xl font-bold">
             <span className="text-gold">Tentang </span> Kami
@@ -57,6 +60,30 @@ export default function Home() {
             yang baik adalah ruang yang selaras dengan lingkungan dan gaya hidup
             penghuninya.
           </p>
+        </div>
+      </div>
+      {/* Kategori */}
+      <div className="flex flex-col gap-10">
+        <h1 className="text-3xl font-bold text-center">
+          <span className="text-gold">Kategori</span> Kami
+        </h1>
+        <div className="flex justify-center gap-5 ">
+          <div className="overflow-hidden rounded-md shadow-[0_0_10px_rgba(0,0,0,0.9)]">
+            <img src="/img/Kategori1.jpg" alt="" />
+            <div className="bg-gold p-2">
+              <p className="font-medium text-lg text-white text-center">
+                Public Places
+              </p>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-md shadow-[0_0_10px_rgba(0,0,0,0.9)]">
+            <img src="/img/Kategori2.jpg" alt="" />
+            <div className="bg-gold p-2">
+              <p className="font-medium text-lg text-white text-center">
+                Private Places
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
