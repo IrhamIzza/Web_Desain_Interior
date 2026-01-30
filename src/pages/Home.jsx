@@ -86,6 +86,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Testimoni */}
+      <div className="flex flex-col gap-10">
+        <h1 className="text-3xl font-bold text-center mb-10">
+          <span className="text-gold">Testimoni</span> pengguna
+        </h1>
+      </div>
     </div>
   );
 }
