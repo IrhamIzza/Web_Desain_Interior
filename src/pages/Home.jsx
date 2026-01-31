@@ -1,3 +1,6 @@
+import React from "react";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+
 export default function Home() {
   return (
     <div className=" py-10 px-32 flex flex-col gap-20">
@@ -87,10 +90,15 @@ export default function Home() {
         </div>
       </div>
       {/* Testimoni */}
-      <div className="flex flex-col gap-10">
-        <h1 className="text-3xl font-bold text-center mb-10">
+      <div className="flex flex-col gap-2 px-16">
+        <h1 className="text-3xl font-bold text-center">
           <span className="text-gold">Testimoni</span> pengguna
         </h1>
+        {/* section lain */}
+
+        <TestimonialCarousel />
+
+        {/* section lain */}
       </div>
     </div>
   );
