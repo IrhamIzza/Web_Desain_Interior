@@ -10,24 +10,27 @@
 
 body {
   @apply font-sans antialiased;
+}
+
+.home-page {
   .swiper-pagination-bullet {
-    width: 30px;
+    width: 32px;
     height: 12px;
-    border-radius: 3px; 
+    border-radius: 3px;
     background-color: #ccc;
     opacity: 1;
     transition: all 0.3s ease;
   }
-
   .swiper-pagination-bullet-active {
-    background-color: #8a7c56; 
-    width: 30px; 
+    background-color: #8a7c56;
+    width: 32px;
   }
   .swiper-pagination {
+    display: flex;
+    gap: 8px;
     text-align: left;
-    margin-left: 30px;
-    margin-bottom: -1px;
-    
+    margin-left: 5px;
+    justify-content: start;
   }
 }
 

@@ -31,7 +31,7 @@ const testimonials = [
 export default function TestimonialSection() {
   return (
     <section className="">
-      <div className="">
+      <div className="home-page">
         {/* LEFT CONTENT */}
         <Swiper
           spaceBetween={30}
@@ -49,16 +49,14 @@ export default function TestimonialSection() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex rounded-xl p-8 py-12">
+              <div className="flex rounded-xl px-2 py-2 pb-12">
                 <img
                   src={item.img}
                   alt=""
-                  className="w-full h-full max-w-[70%] object-cover shadow-[0_0_10px_rgba(0,0,0,0.9)] rounded-lg"
+                  className="w-full h-full max-w-[70%] object-cover shadow-[0_0_10px_rgba(0,0,0,0.6)] rounded-lg border-2 border-white"
                 />
-                <div className="absolute max-h-[50%] bottom-2 left-[40%] mr-2 bg-[#FFF6E5] py-6 px-4 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.9)] overflow-visible">
-                  <p className="text-gray-700 leading-relaxed text-sm mb-2">
-                    {item.text}
-                  </p>
+                <div className="absolute max-h-[50%] bottom-2 left-[40%] mr-2 bg-[#FFF5D2] py-6 px-4 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.6)] overflow-visible">
+                  <p className=" leading-relaxed text-sm mb-2">{item.text}</p>
                   <p className="font-semibold text-gray-900 text-center">
                     {item.name}
                   </p>
@@ -67,34 +65,6 @@ export default function TestimonialSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* RIGHT CAROUSEL */}
-        {/* <Swiper
-          modules={[Pagination, Autoplay]}
-          slidesPerView={1}
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
-          className="relative"
-        >
-          {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative bg-[#FFF6E5] rounded-xl p-8 shadow-lg">
-              
-                <span className="absolute -top-6 right-6 text-6xl text-[#E8D9B5] font-serif">
-                  “
-                </span>
-
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {item.text}
-                </p>
-                <span className="font-semibold text-gray-900">
-                  {item.name}
-                </span>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
       </div>
     </section>
   );
