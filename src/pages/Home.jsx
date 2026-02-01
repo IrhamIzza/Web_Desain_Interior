@@ -71,7 +71,45 @@ export default function Home() {
         </h1>
         <TestimonialCarousel />
       </div>
-
+      {/* Kontak Kami */}
+      <div className="flex flex-col gap-6 px-24">
+        <h1 className="text-3xl font-bold text-center">
+          <span className="text-gold">Kontak</span> kami
+        </h1>
+        <div className="flex justify-center gap-10">
+          <div className="flex-1 flex flex-col gap-4">
+            <p>Jl. Melati No.49, Kepanjen Kidul, Kec. Kepanjenkidul, Kota Blitar, Jawa Timur 66111</p>
+            <div className="grid grid-cols-2 gap-y-1 text-sm w-48">
+              <span>Senin</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Selasa</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Rabu</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Kamis</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Jum’at</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Sabtu</span>
+              <span>: 08.30 - 17.00</span>
+              <span>Minggu</span>
+              <span>: 08.30 - 17.00</span>
+            </div>
+            <div className="flex gap-4 text-3xl">
+              <div className="flex bg-gray-100 rounded-full p-2 border-2 border-gray-400">
+                <i class="ph ph-whatsapp-logo"></i>
+              </div>
+              <div className="flex bg-gray-100 rounded-full p-2 border-2 border-gray-400">
+              <i class="ph ph-instagram-logo"></i>
+              </div>
+              <div className="flex bg-gray-100 rounded-full p-2 border-2 border-gray-400">
+              <i class="ph ph-envelope"></i>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 bg-gray-300 w-full rounded-lg"></div>
+        </div>
+      </div>
     </div>
   );
 }
