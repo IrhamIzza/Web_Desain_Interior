@@ -1,5 +1,6 @@
 import React from "react";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -110,6 +111,8 @@ export default function Home() {
           <div className="flex-1 bg-gray-300 w-full rounded-lg"></div>
         </div>
       </div>
+      {/* Footer */}
+      <Footer/>
     </div>
   );
 }
