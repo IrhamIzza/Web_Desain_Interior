@@ -1,11 +1,15 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 :root {
   font-family: "system-ui", Avenir, "Helvetica Neue", sans-serif;
+  --swiper-navigation-size: 10px; 
+  --swiper-navigation-color: white;
 }
 
 @theme {
   --color-gold: #8a7c56;
   --font-sans: "Poppins", system-ui, sans-serif;
+   
 }
 
 body {
@@ -33,6 +37,39 @@ body {
     justify-content: start;
   }
 }
+html {
+  overflow-y: scroll;
+}
+.pemesanan {
+  .swiper-pagination-bullet {
+    background-color: white;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #8a7c56;
+  }
+}
+/* .pemesanan .swiper-button-next,
+.pemesanan .swiper-button-prev {
+  background-color: white;   
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;        
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 15); 
+  color: #8a7c56;            
+      
+  transition: background-color 0.3s ease;
+}
+
+.pemesanan .swiper-button-next:hover,
+.pemesanan .swiper-button-prev:hover {
+  background-color: #f0f0f0;
+} */
+
 
 /* a {
   font-weight: 500;

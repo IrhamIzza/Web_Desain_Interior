@@ -28,7 +28,7 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialSection() {
+export default function TestimonialCarousel() {
   return (
     <section className="">
       <div className="home-page">

@@ -46,8 +46,8 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/kontak" className={navClass}>
-              Konsultasi
+            <NavLink to="/pemesanan" className={navClass}>
+              Pemesanan
             </NavLink>
           </li>
         </ul>
@@ -119,11 +119,11 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="#konsultasi"
+              href="#pemesanan"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
-              Konsultasi
+              Pemesanan
             </a>
           </li>
         </ul>
