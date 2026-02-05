@@ -22,46 +22,51 @@ export default function PemesananCarousel() {
   ];
 
   return (
-    <div className="pemesanan ">
-      {/* MAIN SLIDER */}
-      <Swiper
-        modules={[Navigation, Thumbs, Autoplay, Pagination]}
-        thumbs={{ swiper: thumbsSwiper }}
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        className=" "
-      >
-        {images.map((img, i) => (
-          <SwiperSlide key={i}>
-            <div className=" flex justify-center pb-10">
-              <img src={img} className="max-w-[400px] h-[300px] object-cover rounded-xl" alt="" />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* THUMBNAILS */}
-      <Swiper
-        modules={[Thumbs]}
-        onSwiper={setThumbsSwiper}
-        slidesPerView={6}
-        spaceBetween={26}
-        watchSlidesProgress
-      >
-        {images.map((img, i) => (
-          <SwiperSlide key={i}
-          >
-            <img
-              src={img}
-              className="object-cover rounded-lg cursor-pointer opacity-70 hover:opacity-100"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="flex flex-col gap-6 pt-10 px-28 bg-linear-to-b from-gold to-white ">
+      <div className="pemesanan ">
+        {/* MAIN SLIDER */}
+        <Swiper
+          modules={[Navigation, Thumbs, Autoplay, Pagination]}
+          thumbs={{ swiper: thumbsSwiper }}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+          className=" "
+        >
+          {images.map((img, i) => (
+            <SwiperSlide key={i}>
+              <div className=" flex justify-center pb-10">
+                <img
+                  src={img}
+                  className="max-w-[400px] h-[300px] object-cover rounded-xl"
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* THUMBNAILS */}
+        <Swiper
+          modules={[Thumbs]}
+          onSwiper={setThumbsSwiper}
+          slidesPerView={6}
+          spaceBetween={26}
+          watchSlidesProgress
+          className="thumbs-swiper"
+        >
+          {images.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                className="object-cover rounded-lg cursor-pointer opacity-60 transition-all duration-300"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

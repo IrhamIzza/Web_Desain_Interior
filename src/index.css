@@ -2,18 +2,18 @@
 @import "tailwindcss-animated";
 :root {
   font-family: "system-ui", Avenir, "Helvetica Neue", sans-serif;
-  --swiper-navigation-size: 10px; 
+  --swiper-navigation-size: 10px;
   --swiper-navigation-color: white;
 }
 
 @theme {
   --color-gold: #8a7c56;
   --font-sans: "Poppins", system-ui, sans-serif;
-   
 }
 
 body {
   @apply font-sans antialiased;
+    /* overflow-y: scroll; */
 }
 
 .home-page {
@@ -37,9 +37,6 @@ body {
     justify-content: start;
   }
 }
-html {
-  overflow-y: scroll;
-}
 .pemesanan {
   .swiper-pagination-bullet {
     background-color: white;
@@ -48,6 +45,12 @@ html {
   }
   .swiper-pagination-bullet-active {
     background-color: #8a7c56;
+  }
+  .thumbs-swiper .swiper-slide-thumb-active img {
+    opacity: 1;
+  }
+  .thumbs-swiper img:hover {
+    opacity: 1;
   }
 }
 /* .pemesanan .swiper-button-next,
@@ -69,7 +72,6 @@ html {
 .pemesanan .swiper-button-prev:hover {
   background-color: #f0f0f0;
 } */
-
 
 /* a {
   font-weight: 500;
