@@ -10,15 +10,15 @@ export default function PemesananCarousel() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const images = [
-    "/img/kategori/foto (1).jpg",
-    "/img/kategori/foto (2).jpg",
-    "/img/kategori/foto (3).jpg",
-    "/img/kategori/foto (4).jpg",
-    "/img/kategori/foto (5).jpg",
-    "/img/kategori/foto (6).jpg",
-    "/img/kategori/foto (7).jpg",
-    "/img/kategori/foto (8).jpg",
-    "/img/kategori/foto (9).jpg",
+    "/img/Kategori/foto (1).jpg",
+    "/img/Kategori/foto (2).jpg",
+    "/img/Kategori/foto (3).jpg",
+    "/img/Kategori/foto (4).jpg",
+    "/img/Kategori/foto (5).jpg",
+    "/img/Kategori/foto (6).jpg",
+    "/img/Kategori/foto (7).jpg",
+    "/img/Kategori/foto (8).jpg",
+    "/img/Kategori/foto (9).jpg",
   ];
 
   return (
