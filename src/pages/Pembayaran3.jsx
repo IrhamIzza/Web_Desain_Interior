@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Stepper from "@/components/pembayaran/stepper";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 export default function Pembayaran() {
   const dataPembayaran = [
@@ -9,10 +10,10 @@ export default function Pembayaran() {
     { label: "Email", value: "mulyobasuki@gmail.com" },
     { label: "Alamat", value: "Jl. Patimura No 30 Kota Blitar" },
     { label: "No. Telepon", value: "0811-1234-5678" },
-    { label: "Kota", value: "Kota Blitar" },
-    { label: "Kecamatan", value: "Sananwetan" },
-    { label: "Provinsi", value: "Jawa Timur" },
     { label: "Negara", value: "Indonesia" },
+    { label: "Tanggal Pemesanan", value: "28-11-2025" },
+    { label: "Paket", value: "Basic" },
+    { label: "Total Pembayaran", value: "Rp 5.000.000" },
   ];
 
   return (
@@ -23,13 +24,20 @@ export default function Pembayaran() {
         {/* Stepper */}
         <div className="lg:col-span-2 ">
           <div className="border rounded-lg p-6 flex items-center justify-between">
-            <Stepper bg1="gray" bg2="gray" text1="gray" text2="gray" icon1="ph-dots-three-circle" icon2="ph-dots-three-circle"></Stepper>
+            <Stepper
+              bg1="blue"
+              bg2="blue"
+              text1="blue"
+              text2="blue"
+              icon1="ph-check-circle"
+              icon2="ph-check-circle"
+            ></Stepper>
           </div>
 
-          <h2 className="text-lg font-semibold py-4">Data Diri</h2>
+          <h2 className="text-lg font-semibold py-4">Details Pembayaran</h2>
           <div className="border rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             {dataPembayaran.map((item, index) => (
-              <div key={index} className="border rounded-md px-4 py-3">
+              <div key={index} className="rounded-md px-4 py-3">
                 <p className="text-xs text-gray-500 mb-1">{item.label}</p>
                 <p className="text-sm font-medium">{item.value}</p>
               </div>
@@ -82,12 +90,29 @@ export default function Pembayaran() {
           <hr className="my-4" />
 
           <div className="relative">
-            <Link to="/pemesanan/pembayaran2">
+            <Link to="/pemesanan">
               <Button
                 variant="outline"
                 className="absolute right-0 mt-6 font-bold"
+                onClick={() => {
+                  toast.promise(
+                    () =>
+                      new Promise((resolve) =>
+                        setTimeout(() => resolve(), 2000),
+                      ),
+                    {
+                      loading: "Loading...",
+                      success: {
+                        message: "Pembayaran Anda Telah Kami Konfirmasi 🎉",
+                        description:
+                          "Kami telah mengonfirmasi pembayaran Rp 5.000.000. Silakan cek Email atau WhatsApp Anda untuk link revisi desain.",
+                      },
+                      error: "Error",
+                    },
+                  );
+                }}
               >
-                Lanjut
+                Checkout
               </Button>
             </Link>
           </div>
