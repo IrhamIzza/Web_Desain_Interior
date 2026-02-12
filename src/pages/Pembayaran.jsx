@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Stepper from "@/components/pembayaran/stepper";
+import Stepper from "@/components/pembayaran/Stepper";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
