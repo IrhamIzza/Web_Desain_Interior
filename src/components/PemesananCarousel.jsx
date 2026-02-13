@@ -22,7 +22,7 @@ export default function PemesananCarousel() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 pt-10 px-28 bg-linear-to-b from-gold to-white ">
+    <div className="flex flex-col gap-6 pt-10 px-10 md:px-28 bg-linear-to-b from-gold to-white ">
       <div className="pemesanan ">
         {/* MAIN SLIDER */}
         <Swiper

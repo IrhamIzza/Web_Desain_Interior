@@ -13,12 +13,36 @@
 
 body {
   @apply font-sans antialiased;
-    /* overflow-y: scroll; */
+  /* overflow-y: scroll; */
+}
+
+@media (min-widt: 768px) {
+  .home-page {
+    .swiper-pagination-bullet {
+      width: 32px;
+      height: 12px;
+      border-radius: 3px;
+      background-color: #ccc;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #8a7c56;
+      width: 32px;
+    }
+    .swiper-pagination {
+      display: flex;
+      gap: 8px;
+      text-align: left;
+      margin-left: 5px;
+      justify-content: start;
+    }
+  }
 }
 
 .home-page {
   .swiper-pagination-bullet {
-    width: 32px;
+    width: 16px;
     height: 12px;
     border-radius: 3px;
     background-color: #ccc;
@@ -27,16 +51,17 @@ body {
   }
   .swiper-pagination-bullet-active {
     background-color: #8a7c56;
-    width: 32px;
+    width: 22px;
   }
   .swiper-pagination {
     display: flex;
-    gap: 8px;
+    gap: 2px;
     text-align: left;
     margin-left: 5px;
     justify-content: start;
   }
 }
+
 .pemesanan {
   .swiper-pagination-bullet {
     background-color: white;

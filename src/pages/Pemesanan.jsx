@@ -11,7 +11,7 @@ export default function Pemesanan() {
     <div className="flex flex-col gap-10 ">
       <PemesananCarousel />
       {/* Detail Desain*/}
-      <div className="bg-white space-y-2 px-40 rounded-xl">
+      <div className="bg-white space-y-2 px-2 md:px-40 rounded-xl">
         <h1 className="text-3xl font-bold text-center text-black">
           Rusty Bakery
         </h1>
@@ -52,7 +52,7 @@ export default function Pemesanan() {
         </Link>
       </div>
       {/* Footer */}
-      <div className="px-28">
+      <div className="md:px-28">
         <Footer />
       </div>
     </div>

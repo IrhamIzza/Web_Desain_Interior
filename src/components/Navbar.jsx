@@ -55,7 +55,8 @@ export default function Navbar() {
         {/* Hamburger (mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="block sm:hidden text-black focus:outline-none" aria-label={isOpen ? "Close menu" : "Open menu"}
+          className="block sm:hidden text-black focus:outline-none"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? (
             <i className="ph ph-x text-2xl"></i>
@@ -82,49 +83,49 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <a
-              href="#tentang"
+            <Link
+              to="/tentang"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
               Tentang
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#kategori"
+            <Link
+              to="/kategori"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
               Kategori
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#testimoni"
+            <Link
+              to="/testimoni"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
               Testimoni
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#kontak"
+            <Link
+              to="/kontak"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
               Kontak
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#pemesanan"
+            <Link
+              to="/pemesanan"
               className="block px-2 py-1 hover:bg-blue-500 rounded"
               onClick={() => setIsOpen(false)}
             >
               Pemesanan
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

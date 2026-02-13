@@ -2,6 +2,7 @@ import { useState } from "react";
 import Dropdown from "@/components/Dropdown";
 import Card from "@/components/Card";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 export default function Kategori() {
   const [search, setSearch] = useState("");
@@ -48,12 +49,12 @@ export default function Kategori() {
   );
 
   return (
-    <div className="flex flex-col gap-10 py-10 px-20">
-      <h1 className="text-3xl font-bold text-center">
+    <div className="flex flex-col gap-10 py-10 md:px-20">
+      <h1 className="text-2xl md:text-3xl font-bold text-center">
         Desain Interior <span className="text-gold">Public Places</span>
       </h1>
       {/* Dropdown */}
-      <div className="flex gap-6 mx-auto">
+      <div className="hidden md:flex gap-6 mx-auto ">
         <Dropdown nama="Jenis Desain Interior" items={menuDesain}></Dropdown>
         <Dropdown nama="Jenis Bangunan" items={menujenisBangunan}></Dropdown>
         {/* Search */}
@@ -70,7 +71,7 @@ export default function Kategori() {
         </div>
       </div>
       {/* Card */}
-      <div className="grid grid-cols-3 px-20 gap-10 mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 px-2 md:px-20 gap-6 md:gap-10 mx-auto">
         {filteredCard.map((item, index) => (
           <div
             key={index}
@@ -91,7 +92,7 @@ export default function Kategori() {
 
           {/* Modal box */}
           <div
-            className="relative bg-white rounded-xl p-6 w-[40vw] shadow-lg z-10              
+            className="relative bg-white rounded-xl p-6 md:w-[40vw] shadow-lg z-10              
               animate-jump-in animate-delay-200 animate-once"
           >
             <div>
@@ -116,10 +117,11 @@ export default function Kategori() {
               >
                 Kembali
               </button>
-
-              <button className="px-4 py-2 bg-black text-white rounded-md text-sm cursor-pointer">
-                Lihat Hasil Konstruksi
-              </button>
+              <Link to="/pemesanan">
+                <button className="px-4 py-2 bg-black text-white rounded-md text-sm cursor-pointer">
+                  Lihat Hasil Konstruksi
+                </button>
+              </Link>
             </div>
           </div>
         </div>

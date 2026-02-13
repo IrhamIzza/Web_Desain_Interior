@@ -55,8 +55,8 @@ export default function TestimonialCarousel() {
                   alt=""
                   className="w-full h-full max-w-[70%] object-cover shadow-[0_0_10px_rgba(0,0,0,0.6)] rounded-lg border-2 border-white"
                 />
-                <div className="absolute max-h-[50%] bottom-2 left-[40%] mr-2 bg-[#FFF5D2] py-6 px-4 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.6)] overflow-visible">
-                  <p className=" leading-relaxed text-sm mb-2">{item.text}</p>
+                <div className="absolute max-h-[50%] bottom-2 left-[40%] mr-2 bg-[#FFF5D2] py-2 md:py-6 px-2 md:px-4 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.6)] overflow-hidden">
+                  <p className=" leading-relaxed text-xs  md:text-sm mb-2">{item.text}</p>
                   <p className="font-semibold text-gray-900 text-center">
                     {item.name}
                   </p>
